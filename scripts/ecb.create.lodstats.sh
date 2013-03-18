@@ -13,7 +13,7 @@
 
 
 echo "Creating LODStats for Datasets"
-#find "$data"import/*.nt -name "[!CodeList|Concept|KeyFamily|ecb.|meta.]*" | while read i ; do lodstats -val "$i" > "$i".stats.ttl ; echo "Created $i.stats.ttl" ; done;
+find "$data"import/*.nt -name "[!CodeList|Concept|KeyFamily|ecb.|meta.]*" | while read i ; do lodstats -val "$i" > "$i".stats.ttl ; echo "Created $i.stats.ttl" ; done;
 #652 minutes
 
 echo Exporting "$namespace"graph/meta ;

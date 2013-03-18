@@ -11,9 +11,13 @@ prefix sdmx-concept: <http://purl.org/linked-data/sdmx/2009/concept#>
 prefix prov: <http://www.w3.org/ns/prov#>
 prefix sd: <http://www.w3.org/ns/sparql-service-description#>
 prefix : <http://ecb.270a.info/void.ttl#>
-prefix ecb-dataset: <http://ecb.270a.info/dataset/>
 prefix ecb-graph: <http://ecb.270a.info/graph/>
-
+prefix oecd-dataset: <http://oecd.270a.info/dataset/>
+prefix bfs-dataset: <http://bfs.270a.info/dataset/>
+prefix fao-dataset: <http://fao.270a.info/dataset/>
+prefix ecb-dataset: <http://ecb.270a.info/dataset/>
+prefix worldbank-dataset: <http://worldbank.270a.info/dataset/>
+prefix transparency-dataset: <http://transparency.270a.info/dataset/>
 
 CONSTRUCT {
 <http://csarven.ca/#i>
@@ -33,15 +37,16 @@ CONSTRUCT {
 
 ecb-dataset:ecb
     a void:Dataset ;
+    dcterms:title "European Central Bank datasets"@en ;
     foaf:homepage <http://ecb.270a.info/> ;
     dcterms:source <http://www.ecb.int/> ;
     dcterms:publisher <http://csarven.ca/#i> ;
-    dcterms:modified "2013-03-07"^^xsd:date ;
+    dcterms:modified "2013-03-14"^^xsd:date ;
     dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
     void:subset
         ecb-dataset:void ,
         ?voidDataset ;
-    void:triples 241316157 ;
+    void:triples 241401822 ;
     dcterms:subject
         <http://dbpedia.org/resource/Statistical_survey> ,
         <http://dbpedia.org/resource/Finance> ,
@@ -59,13 +64,10 @@ ecb-dataset:ecb
 ecb-dataset:void
     a sd:Graph, void:Dataset ;
     dcterms:title "SD+VoID triples"@en ;
-    void:triples 10074 ;
+    void:triples 10158 ;
     void:dataDump <http://ecb.270a.info/void.ttl> ;
     .
 
-ecb-dataset:meta
-    void:dataDump <http://ecb.270a.info/data/meta.tar.gz> ;
-    .
 
 ?voidDataset
     a sd:Graph ;
@@ -89,7 +91,7 @@ ecb-dataset:meta
     a sd:Dataset ;
     dcterms:title "ECB Linked Data"@en ;
     dcterms:description "ECB Linked Data"@en ;
-    void:triples 241316157 ;
+    void:triples 241401822 ;
 
     sd:defaultGraph :defaultGraph ;
 
@@ -110,48 +112,51 @@ ecb-dataset:meta
     .
 
 
-:meta_worldbank
+:linkset-ecb-worldbank
     a void:Linkset ;
     void:linkPredicate skos:exactMatch ;
-    void:subjectsTarget :meta ;
-    void:objectsTarget :worldbank ;
+    void:subjectsTarget ecb-dataset:ecb ;
+    void:objectsTarget worldbank-dataset:worldbank ;
     void:triples 188 ;
     .
-:worldbank
+worldbank-dataset:worldbank
     rdf:type void:Dataset ;
+    void:sparqlEndpoint <http://worldbank.270a.info/sparql> ;
     foaf:homepage <http://worldbank.270a.info/> ;
     .
-:meta_transparency
+:linkset-ecb-transparency
     a void:Linkset ;
     void:linkPredicate skos:exactMatch ;
-    void:subjectsTarget :meta ;
-    void:objectsTarget :worldbank ;
+    void:subjectsTarget ecb-dataset:ecb ;
+    void:objectsTarget transparency-dataset:transparency-international ;
     void:triples 167 ;
     .
-:transparency
+transparency-dataset:transparency-international
     rdf:type void:Dataset ;
     foaf:homepage <http://transparency.270a.info/> ;
     .
-:meta_bfs
+:linkset-ecb-bfs
     a void:Linkset ;
     void:linkPredicate skos:exactMatch ;
-    void:subjectsTarget :meta ;
-    void:objectsTarget :bfs ;
+    void:subjectsTarget ecb-dataset:ecb ;
+    void:objectsTarget bfs-dataset:bfs ;
     void:triples 221 ;
     .
-:bfs
+bfs-dataset:bfs
     rdf:type void:Dataset ;
+    void:sparqlEndpoint <http://bfs.270a.info/sparql> ;
     foaf:homepage <http://bfs.270a.info/> ;
     .
-:meta_dbpedia
+:linkset-ecb-dbpedia
     a void:Linkset ;
     void:linkPredicate skos:exactMatch ;
-    void:subjectsTarget :meta ;
-    void:objectsTarget :dbpedia ;
+    void:subjectsTarget ecb-dataset:ecb ;
+    void:objectsTarget <http://dbpedia.org/void/Dataset> ;
     void:triples 239 ;
     .
-:dbpedia
+<http://dbpedia.org/void/Dataset>
     rdf:type void:Dataset ;
+    void:sparqlEndpoint <http://dbpedia.org/sparql> ;
     foaf:homepage <http://dbpedia.org/> ;
     .
 

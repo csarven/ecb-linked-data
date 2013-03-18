@@ -10,7 +10,7 @@
 ecbNamespace="http://sdw-ws.ecb.europa.eu/" ;
 #ecbItems=(Organisationscheme Dataflow CategoryScheme CodeList Concept MetadataStructureDefinition KeyFamily StructureSet ReportingTaxonomy Process);
 MetaDataCodes=(CodeList Concept KeyFamily) ;
-DataSetCodes=(BSI ICP SAFE SEC SEE SPF YC) ;
+
 
 
 rm "$data""$agency".prov.retrieval.rdf
@@ -62,6 +62,7 @@ sleep 1
 
 
 
+DataSetCodes=(BSI ICP SAFE SEC SEE SPF YC) ;
 echo "Checking Dataflow.xml:" ;
 xpath -q -e "/message:Structure/message:Dataflows/structure:Dataflow[not(structure:CategoryRef)]/@id" "$data"Dataflow.xml | perl -pe 's/(.*)(?=id=\")id=\"(.*)(?=\")\"(.*)/$2/' > ecb.data.txt
 
@@ -98,7 +99,7 @@ sleep 1
                 <prov:generated>
                     <rdf:Description rdf:about="http://ecb.270a.info/data/'$DataSetCode'.xml">
                         <dcterms:identifier>'$DataSetCode'</dcterms:identifier>
-                        <dcterms:title>'$title'</dcterms:title>
+                        <dcterms:title xml:lang="en">'$title'</dcterms:title>
                     </rdf:Description>
                 </prov:generated>
                 <prov:generated rdf:resource="http://ecb.270a.info/data/'$DataSetCode'.xml"/>
@@ -152,7 +153,7 @@ sleep 1
             <prov:generated>
                 <rdf:Description rdf:about="http://ecb.270a.info/data/'$DataSetCode'.'$j'.xml">
                     <dcterms:identifier>'$DataSetCode'</dcterms:identifier>
-                    <dcterms:title>'$title'</dcterms:title>
+                    <dcterms:title xml:lang="en">'$title'</dcterms:title>
                 </rdf:Description>
             </prov:generated>
             <rdfs:label xml:lang="en">Retrieved '$DataSetCode'</rdfs:label>

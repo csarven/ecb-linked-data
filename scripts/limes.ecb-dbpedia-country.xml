@@ -18,18 +18,6 @@
         <LABEL>owl</LABEL>
     </PREFIX>
     <PREFIX>
-        <NAMESPACE>http://dbpedia.270a.info/dataset/world-bank-finances/</NAMESPACE>
-        <LABEL>wbfd</LABEL>
-    </PREFIX>
-    <PREFIX>
-        <NAMESPACE>http://dbpedia.270a.info/property/</NAMESPACE>
-        <LABEL>property</LABEL>
-    </PREFIX>
-    <PREFIX>
-        <NAMESPACE>http://dbpedia.270a.info/classification/</NAMESPACE>
-        <LABEL>classification</LABEL>
-    </PREFIX>
-    <PREFIX>
         <NAMESPACE>http://dbpedia.org/ontology/</NAMESPACE>
         <LABEL>dbpedia</LABEL>
     </PREFIX>
