@@ -46,7 +46,7 @@ ecb-dataset:ecb
     void:subset
         ecb-dataset:void ,
         ?voidDataset ;
-    void:triples 241401822 ;
+    void:triples 241400230 ;
     dcterms:subject
         <http://dbpedia.org/resource/Statistical_survey> ,
         <http://dbpedia.org/resource/Finance> ,
@@ -64,7 +64,7 @@ ecb-dataset:ecb
 ecb-dataset:void
     a sd:Graph, void:Dataset ;
     dcterms:title "SD+VoID triples"@en ;
-    void:triples 10158 ;
+    void:triples 10199 ;
     void:dataDump <http://ecb.270a.info/void.ttl> ;
     .
 
@@ -91,7 +91,7 @@ ecb-dataset:void
     a sd:Dataset ;
     dcterms:title "ECB Linked Data"@en ;
     dcterms:description "ECB Linked Data"@en ;
-    void:triples 241401822 ;
+    void:triples 241400230 ;
 
     sd:defaultGraph :defaultGraph ;
 
@@ -181,7 +181,10 @@ WHERE {
             ?s a qb:DataSet .
             ?s qb:structure ?structure .
             OPTIONAL {
-                ?structure skos:prefLabel ?dataSetTitle .
+                ?s dcterms:title ?dataSetTitle .
+            }
+            OPTIONAL {
+                ?s skos:prefLabel ?dataSetTitle .
             }
             OPTIONAL {
                 ?structure sdmx-concept:dsi ?dataSetIdentifier .
