@@ -68,7 +68,7 @@
     <REVIEW>
         <THRESHOLD>0.7</THRESHOLD>
         <FILE>ecb-dbpedia.country.trigrams.review.nt</FILE>
-        <RELATION>&lt;http://www.w3.org/2004/02/skos/core#closeMatch&gt;</RELATION>
+        <RELATION>&lt;http://www.w3.org/2004/02/skos/core#exactMatch&gt;</RELATION>
     </REVIEW>
 
     <EXECUTION>Simple</EXECUTION>
