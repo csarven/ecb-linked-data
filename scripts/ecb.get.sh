@@ -102,7 +102,6 @@ sleep 1
                         <dcterms:title xml:lang="en">'$title'</dcterms:title>
                     </rdf:Description>
                 </prov:generated>
-                <prov:generated rdf:resource="http://ecb.270a.info/data/'$DataSetCode'.xml"/>
                 <rdfs:label xml:lang="en">Retrieved '$DataSetCode'</rdfs:label>
                 <rdfs:comment xml:lang="en">'$DataSetCode' retrieved from source and saved to local filesystem.</rdfs:comment>
             </rdf:Description>' >> "$data""$agency".prov.retrieval.rdf ;
