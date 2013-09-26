@@ -27,7 +27,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 echo "Getting MetaDataCodes:";
 for MetaDataCode in "${MetaDataCodes[@]}" ;
     do
-sleep 0.1
+#sleep 0.1
         dtstart=$(date +"%Y-%m-%dT%H:%M:%SZ") ;
         dtstartd=$(echo "$dtstart" | sed 's/[^0-9]*//g') ;
 
@@ -35,9 +35,9 @@ sleep 0.1
 
         echo "$MetaDataCode" ;
 
-#        wget -c -t 1 --timeout 300 --no-http-keep-alive "$downloadURL" -O "$data""$MetaDataCode".xml
+        wget -c -t 1 --timeout 300 --no-http-keep-alive "$downloadURL" -O "$data""$MetaDataCode".xml
 
-sleep 1
+#sleep 1
         dtend=$(date +"%Y-%m-%dT%H:%M:%SZ") ;
         dtendd=$(echo "$dtend" | sed 's/[^0-9]*//g') ;
 
@@ -61,30 +61,55 @@ sleep 1
     done
 
 
+echo "Getting Dataflow.xml";
+downloadURL="$ecbNamespace"Dataflow ;
+wget -c -t 1 --timeout 300 --no-http-keep-alive "$downloadURL" -O "$data"Dataflow.xml ;
 
-DataSetCodes=(BSI ICP SAFE SEC SEE SPF YC) ;
+
+
+
 echo "Checking Dataflow.xml:" ;
 xpath -q -e "/message:Structure/message:Dataflows/structure:Dataflow[not(structure:CategoryRef)]/@id" "$data"Dataflow.xml | perl -pe 's/(.*)(?=id=\")id=\"(.*)(?=\")\"(.*)/$2/' > ecb.data.txt
 
-echo "Getting DataSetCodes:" ;
+
+echo "Getting Dataflows";
 while read DataSetCode ; do
-    if [[ ${DataSetCodes[*]} =~ "$DataSetCode" ]] ;
-        then
-        echo "  Skipping $DataSetCode for later." ;
-    else
-sleep 0.1
+    downloadURL="$ecbNamespace"Dataflow/"$DataSetCode" ;
+    wget -c -t 1 --timeout 300 --no-http-keep-alive "$downloadURL" -O "$data"Dataflow."$DataSetCode".xml ;
+done < ecb.data.txt
+
+
+
+while read DataSetCode ; do
+    if [ -s "$data"Dataflow."$DataSetCode".xml ]
+    then
+        echo "Copying $DataSetCode REF_AREAs";
+        xpath -q -e "/message:Structure/message:Dataflows/structure:Dataflow/structure:Constraint/common:CubeRegion/common:Member[@isIncluded = 'true' and common:ComponentRef = 'REF_AREA']/common:MemberValue/common:Value/text()" "$data"Dataflow."$DataSetCode".xml > "$data"Dataflow."$DataSetCode".xml.REF_AREA.txt ;
+    fi
+done < ecb.data.txt
+
+
+echo "Getting some of the DataSetCodes in chunks:" ;
+while read DataSetCode ; do
+    if [ -s "$data"Dataflow."$DataSetCode".xml ]
+    then
+        while read j ; do
+
+    #sleep 0.1
             dtstart=$(date +"%Y-%m-%dT%H:%M:%SZ") ;
             dtstartd=$(echo "$dtstart" | sed 's/[^0-9]*//g') ;
 
-            downloadURL="$ecbNamespace""GenericData?dataflow=$DataSetCode" ;
-
             title=$(xpath -q -e "/message:Structure/message:Dataflows/structure:Dataflow[@id = '$DataSetCode']/structure:Name/text()" "$data"Dataflow.xml) ;
 
-            echo "$DataSetCode - $title" ;
+            echo "$DataSetCode $j - $title" ;
 
-#            wget -c -t 1 --timeout 300 --no-http-keep-alive "$downloadURL" -O "$data""$DataSetCode".xml
+            downloadURL="$ecbNamespace"GenericData?dataflow="$DataSetCode""&"REF_AREA="$j" ;
+            downloadURLSafe=$(echo "$downloadURL" | sed 's/&/&amp;/');
 
-sleep 1
+            wget -c -t 1 --timeout 300 --no-http-keep-alive "$downloadURL" -O "$data""$DataSetCode"."$j".xml ;
+
+    #sleep 1
+
             dtend=$(date +"%Y-%m-%dT%H:%M:%SZ") ;
             dtendd=$(echo "$dtend" | sed 's/[^0-9]*//g') ;
 
@@ -95,9 +120,9 @@ sleep 1
                 <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">'$dtend'</prov:endedAtTime>
                 <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
                 <prov:used rdf:resource="https://launchpad.net/ubuntu/+source/wget"/>
-                <prov:used rdf:resource="'$downloadURL'"/>
+                <prov:used rdf:resource="'$downloadURLSafe'"/>
                 <prov:generated>
-                    <rdf:Description rdf:about="http://ecb.270a.info/data/'$DataSetCode'.xml">
+                    <rdf:Description rdf:about="http://ecb.270a.info/data/'$DataSetCode'.'$j'.xml">
                         <dcterms:identifier>'$DataSetCode'</dcterms:identifier>
                         <dcterms:title xml:lang="en">'$title'</dcterms:title>
                     </rdf:Description>
@@ -105,62 +130,10 @@ sleep 1
                 <rdfs:label xml:lang="en">Retrieved '$DataSetCode'</rdfs:label>
                 <rdfs:comment xml:lang="en">'$DataSetCode' retrieved from source and saved to local filesystem.</rdfs:comment>
             </rdf:Description>' >> "$data""$agency".prov.retrieval.rdf ;
+
+        done < "$data"Dataflow."$DataSetCode".xml.REF_AREA.txt ;
     fi
 done < ecb.data.txt
-
-
-
-DataSetCodes=(BSI ICP SAFE SEE SPF) ;
-for DataSetCode in "${DataSetCodes[@]}" ; do
-    echo "Copying $DataSetCode REF_AREAs";
-    xpath -q -e "/message:Structure/message:Dataflows/structure:Dataflow/structure:Constraint/common:CubeRegion/common:Member[@isIncluded = 'true' and common:ComponentRef = 'REF_AREA']/common:MemberValue/common:Value/text()" "$data"/Dataflow."$DataSetCode".xml > "$i".REF_AREA.txt ;
-done
-
-
-echo "Getting some of the DataSetCodes in chunks:" ;
-for DataSetCode in "${DataSetCodes[@]}" ; do
-    while read j ; do
-
-sleep 0.1
-        dtstart=$(date +"%Y-%m-%dT%H:%M:%SZ") ;
-        dtstartd=$(echo "$dtstart" | sed 's/[^0-9]*//g') ;
-
-        downloadURL="$ecbNamespace""GenericData?dataflow=$DataSetCode" ;
-
-        title=$(xpath -q -e "/message:Structure/message:Dataflows/structure:Dataflow[@id = '$DataSetCode']/structure:Name/text()" "$data"Dataflow.xml) ;
-
-        echo "$DataSetCode $j - $title" ;
-
-
-        downloadURL="$ecbNamespace"GenericData?dataflow="$DataSetCode""&amp;"REF_AREA="$j" ;
-
-#        wget -c -t 1 --timeout 300 --no-http-keep-alive "$downloadURL" -O "$data""$u"."$j".xml ;
-
-sleep 1
-
-        dtend=$(date +"%Y-%m-%dT%H:%M:%SZ") ;
-        dtendd=$(echo "$dtend" | sed 's/[^0-9]*//g') ;
-
-        echo '
-        <rdf:Description rdf:about="http://ecb.270a.info/provenance/activity/'$dtstartd'">
-            <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-            <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">'$dtstart'</prov:startedAtTime>
-            <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">'$dtend'</prov:endedAtTime>
-            <prov:wasAssociatedWith rdf:resource="http://csarven.ca/#i"/>
-            <prov:used rdf:resource="https://launchpad.net/ubuntu/+source/wget"/>
-            <prov:used rdf:resource="'$downloadURL'"/>
-            <prov:generated>
-                <rdf:Description rdf:about="http://ecb.270a.info/data/'$DataSetCode'.'$j'.xml">
-                    <dcterms:identifier>'$DataSetCode'</dcterms:identifier>
-                    <dcterms:title xml:lang="en">'$title'</dcterms:title>
-                </rdf:Description>
-            </prov:generated>
-            <rdfs:label xml:lang="en">Retrieved '$DataSetCode'</rdfs:label>
-            <rdfs:comment xml:lang="en">'$DataSetCode' retrieved from source and saved to local filesystem.</rdfs:comment>
-        </rdf:Description>' >> "$data""$agency".prov.retrieval.rdf ;
-
-    done < "$data"Dataflow."$DataSetCode".xml.REF_AREA.txt ;
-done
 
 echo -e "\n</rdf:RDF>" >> "$data""$agency".prov.retrieval.rdf ;
 
