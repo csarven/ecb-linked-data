@@ -47,6 +47,7 @@
         <RESTRICTION>?x a skos:Concept</RESTRICTION>
         <RESTRICTION>?x skos:topConceptOf &lt;http://ecb.270a.info/code/1.0/CL_AREA_EE&gt;</RESTRICTION>
         <PROPERTY>skos:prefLabel AS lowercase->nolang</PROPERTY>
+        <PROPERTY>skos:notation AS lowercase->nolang</PROPERTY>
     </SOURCE>
 
     <TARGET>
@@ -57,18 +58,18 @@
         <PAGESIZE>-1</PAGESIZE>
         <RESTRICTION>?y a dbo:Country</RESTRICTION>
         <PROPERTY>skos:prefLabel AS lowercase->nolang</PROPERTY>
+        <PROPERTY>skos:notation AS lowercase->nolang</PROPERTY>
     </TARGET>
 
-    <METRIC>trigrams(x.skos:prefLabel, y.skos:prefLabel)</METRIC>
-
+    <METRIC>AND(trigrams(x.skos:prefLabel, y.skos:prefLabel)|0.01, trigramts(x.skos:notation, y.skos:notation)|0.3)</METRIC>
     <ACCEPTANCE>
-        <THRESHOLD>0.9</THRESHOLD>
-        <FILE>ecb-transparency.country.trigrams.accept.nt</FILE>
+        <THRESHOLD>0.01</THRESHOLD>
+        <FILE>ecb-transparency.location.trigrams.accept.nt</FILE>
         <RELATION>&lt;http://www.w3.org/2004/02/skos/core#exactMatch&gt;</RELATION>
     </ACCEPTANCE>
     <REVIEW>
-        <THRESHOLD>0.7</THRESHOLD>
-        <FILE>ecb-transparency.country.trigrams.review.nt</FILE>
+        <THRESHOLD>0.01</THRESHOLD>
+        <FILE>ecb-transparency.location.trigrams.review.nt</FILE>
         <RELATION>&lt;http://www.w3.org/2004/02/skos/core#closeMatch&gt;</RELATION>
     </REVIEW>
 
