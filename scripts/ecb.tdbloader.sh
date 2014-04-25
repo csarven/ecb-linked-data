@@ -24,21 +24,19 @@ ls -1S "$data"import/*.nt | grep -Ev "(CodeList|Concept|KeyFamily)" | while read
 java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data""$agency".observations.meta.nt
 
 
-#rapper -g ecb-bfs-location.trigrams.accept.nt > /data/ecb-linked-data/data/ecb.exactMatch.bfs.nt
-#rapper -g ecb-bfs-location.trigrams.review.nt >> /data/ecb-linked-data/data/ecb.exactMatch.bfs.nt
-#rapper -g ecb-dbpedia.country.trigrams.accept.nt > /data/ecb-linked-data/data/ecb.exactMatch.dbpedia.nt
-#rapper -g ecb-dbpedia.country.trigrams.review.nt >> /data/ecb-linked-data/data/ecb.exactMatch.dbpedia.nt
-#rapper -g ecb-worldbank.country.trigrams.accept.nt > /data/ecb-linked-data/data/ecb.exactMatch.worldbank.nt
-#rapper -g ecb-worldbank.country.trigrams.review.nt >> /data/ecb-linked-data/data/ecb.exactMatch.worldbank.nt
-#rapper -g ecb-transparency.country.trigrams.accept.nt > /data/ecb-linked-data/data/ecb.exactMatch.transparency.nt
-#rapper -g ecb-transparency.country.trigrams.review.nt >> /data/ecb-linked-data/data/ecb.exactMatch.transparency.nt
-
-java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.worldbank.nt
-java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.transparency.nt
 java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.dbpedia.nt
+java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.eurostat.nt
+java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.geonames.nt
+java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.hr.nt
+java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.qudt.nt
+java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.worldbank.nt
+java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.worldbank.currency.nt
+java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.transparency.nt
 java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.bfs.nt
 java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.fao.nt
 java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.imf.nt
+java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.uis.nt
+java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.exactMatch.frb.currency.nt
 java "$JVM_ARGS" tdb.tdbloader --desc="$tdbAssembler" --graph="$namespace"graph/meta "$data"ecb.property.meta.nt
 
 ./ecb.tdbstats.sh

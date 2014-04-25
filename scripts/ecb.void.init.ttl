@@ -12,12 +12,14 @@ prefix prov: <http://www.w3.org/ns/prov#>
 prefix sd: <http://www.w3.org/ns/sparql-service-description#>
 prefix : <http://ecb.270a.info/void.ttl#>
 prefix ecb-graph: <http://ecb.270a.info/graph/>
-prefix oecd-dataset: <http://oecd.270a.info/dataset/>
-prefix bfs-dataset: <http://bfs.270a.info/dataset/>
-prefix fao-dataset: <http://fao.270a.info/dataset/>
-prefix ecb-dataset: <http://ecb.270a.info/dataset/>
-prefix imf-dataset: <http://imf.270a.info/dataset/>
-prefix worldbank-dataset: <http://worldbank.270a.info/dataset/>
+prefix oecd-dataset: <http://oecd.270a.info/dataset/> 
+prefix bfs-dataset: <http://bfs.270a.info/dataset/> 
+prefix fao-dataset: <http://fao.270a.info/dataset/> 
+prefix ecb-dataset: <http://ecb.270a.info/dataset/> 
+prefix imf-dataset: <http://imf.270a.info/dataset/> 
+prefix uis-dataset: <http://uis.270a.info/dataset/> 
+prefix frb-dataset: <http://frb.270a.info/dataset/> 
+prefix worldbank-dataset: <http://worldbank.270a.info/dataset/> 
 prefix transparency-dataset: <http://transparency.270a.info/dataset/>
 
 CONSTRUCT {
@@ -129,10 +131,10 @@ worldbank-dataset:worldbank
     a void:Linkset ;
     void:linkPredicate skos:exactMatch ;
     void:subjectsTarget ecb-dataset:ecb ;
-    void:objectsTarget transparency-dataset:transparency-international ;
+    void:objectsTarget transparency-dataset:transparency ;
     void:triples 167 ;
     .
-transparency-dataset:transparency-international
+transparency-dataset:transparency
     rdf:type void:Dataset ;
     foaf:homepage <http://transparency.270a.info/> ;
     .
@@ -172,17 +174,118 @@ imf-dataset:imf
     void:sparqlEndpoint <http://imf.270a.info/sparql> ;
     foaf:homepage <http://imf.270a.info/> ;
     .
+:linkset-ecb-uis
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget ecb-dataset:ecb ;
+    void:objectsTarget uis-dataset:uis ;
+    void:triples 855 ;
+    .
+uis-dataset:uis
+    rdf:type void:Dataset ;
+    void:sparqlEndpoint <http://uis.270a.info/sparql> ;
+    foaf:homepage <http://uis.270a.info/> ;
+    .
+:linkset-ecb-frb
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget ecb-dataset:ecb ;
+    void:objectsTarget frb-dataset:frb ;
+    void:triples 276 ;
+    .
+frb-dataset:frb
+    rdf:type void:Dataset ;
+    void:sparqlEndpoint <http://frb.270a.info/sparql> ;
+    foaf:homepage <http://frb.270a.info/> ;
+    .
 :linkset-ecb-dbpedia
     a void:Linkset ;
     void:linkPredicate skos:exactMatch ;
     void:subjectsTarget ecb-dataset:ecb ;
     void:objectsTarget <http://dbpedia.org/void/Dataset> ;
-    void:triples 239 ;
+    void:triples 234 ;
     .
+:linkset-ecb-hr
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget ecb-dataset:ecb ;
+    void:objectsTarget <http://hxl.humanitarianresponse.info/> ;
+    void:triples 229 ;
+    .
+:linkset-ecb-eurostat
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget ecb-dataset:ecb ;
+    void:objectsTarget <http://eurostat.linked-statistics.org/void.ttl#eurostat> ;
+    void:triples 238 ;
+    .
+:linkset-ecb-geonames
+    a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:subjectsTarget ecb-dataset:ecb ;
+    void:objectsTarget <http://sws.geonames.org/> ;
+    void:triples 252 ;
+    .
+
+
 <http://dbpedia.org/void/Dataset>
     rdf:type void:Dataset ;
+    dcterms:title "DBpedia"@en ;
+    #TODO: What's the count?
     void:sparqlEndpoint <http://dbpedia.org/sparql> ;
     foaf:homepage <http://dbpedia.org/> ;
+    .
+#TODO: What's the real VoID URL?
+<http://sws.geonames.org/>
+    rdf:type void:Dataset ;
+    dcterms:title "Geonames"@en ;
+    #TODO: What's the count?
+    foaf:homepage <http://sws.geonames.org/> ;
+    .
+#TODO: What's the real VoID URL?
+<http://data.nasa.gov/>
+    rdf:type void:Dataset ;
+    dcterms:title "NASA"@en ;
+    #TODO: What's the count?
+    foaf:homepage <http://data.nasa.gov/> ;
+    .
+<http://eurostat.linked-statistics.org/void.ttl#eurostat>
+    rdf:type void:Dataset ;
+    dcterms:title "Eurostat"@en ;
+    void:sparqlEndpoint <http://eurostat.linked-statistics.org/sparql> ;
+    #TODO: What's the count?
+    foaf:homepage <http://eurostat.linked-statistics.org/> ;
+    .
+#TODO: What's the real VoID URL?
+<http://data.nasa.gov/>
+    rdf:type void:Dataset ;
+    dcterms:title "NASA"@en ;
+    #TODO: What's the count?
+    foaf:homepage <http://data.nasa.gov/> ;
+    .
+#TODO: What's the real VoID URL?
+<http://purl.org/collections/iati/void.ttl#IATI>
+    rdf:type void:Dataset ;
+    dcterms:title "International Aid Transparency Initiative"@en ;
+    void:sparqlEndpoint <http://semanticweb.cs.vu.nl/iati/user/query> ;
+    #TODO: What's the count?
+    foaf:homepage <http://semanticweb.cs.vu.nl/iati/home> ;
+    .
+#TODO: What's the real VoID URL?
+<http://hxl.humanitarianresponse.info/>
+    rdf:type void:Dataset ;
+    dcterms:title "Humanitarian Response"@en ;
+    void:sparqlEndpoint <http://hxl.humanitarianresponse.info/sparql> ;
+    #TODO: What's the count?
+    foaf:homepage <http://hxl.humanitarianresponse.info/> ;
+    .
+#TODO: What's the real VoID URL?
+<http://eunis.eea.europa.eu/>
+    rdf:type void:Dataset ;
+    dcterms:title "EUNIS"@en ;
+    void:sparqlEndpoint <http://semantic.eea.europa.eu/sparql> ;
+    #TODO: What's the count?
+    foaf:homepage <http://eunis.eea.europa.eu/> ;
     .
 
 
