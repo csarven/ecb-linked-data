@@ -1,0 +1,364 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix xstats: <http://example.org/XStats#> .
+
+<http://ecb.270a.info/dataset/ICP>
+    void:classPartition [
+        void:class <http://www.w3.org/ns/prov#Usage> ;
+        void:entities 60
+    ], [
+        void:class <http://www.w3.org/ns/prov#Association> ;
+        void:entities 30
+    ], [
+        void:class <http://www.w3.org/ns/prov#Activity> ;
+        void:entities 31
+    ], [
+        void:class qb:Observation ;
+        void:entities 2484027
+    ], [
+        void:class qb:Slice ;
+        void:entities 23306
+    ], [
+        void:class <http://www.w3.org/ns/prov#Agent> ;
+        void:entities 60
+    ], [
+        void:class <http://www.w3.org/ns/prov#Entity> ;
+        void:entities 92
+    ], [
+        void:class qb:DataSet ;
+        void:entities 31
+    ] ;
+    void:classes 8 ;
+    void:entities 2507449 ;
+    void:properties 63 ;
+    void:propertyPartition [
+        void:distinctObjects 214 ;
+        void:distinctSubjects 2470575 ;
+        void:property <http://ecb.270a.info/dimension/1.0/FREQ> ;
+        void:triples 2470575
+    ], [
+        void:distinctObjects 30 ;
+        void:distinctSubjects 31 ;
+        void:property <http://purl.org/dc/terms/license> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 61 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#wasInformedBy> ;
+        void:triples 62
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#startedAtTime> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 30434 ;
+        void:distinctSubjects 2470575 ;
+        void:property <http://ecb.270a.info/dimension/1.0/TIME_PERIOD> ;
+        void:triples 2470575
+    ], [
+        void:distinctObjects 8661 ;
+        void:distinctSubjects 13452 ;
+        void:property <http://eurostat.270a.info/measure/1.0/OBS_VALUE> ;
+        void:triples 13452
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 31 ;
+        void:property qb:structure ;
+        void:triples 31
+    ], [
+        void:distinctObjects 17 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/REF_AREA> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 32 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ESA95TP_ASSET> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 60 ;
+        void:property <http://www.w3.org/ns/prov#atTime> ;
+        void:triples 62
+    ], [
+        void:distinctObjects 21661 ;
+        void:distinctSubjects 2457471 ;
+        void:property <http://ecb.270a.info/attribute/1.0/DOM_SER_IDS> ;
+        void:triples 2457471
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#wasGeneratedBy> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 28 ;
+        void:distinctSubjects 13452 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/TIME_PERIOD> ;
+        void:triples 13452
+    ], [
+        void:distinctObjects 151 ;
+        void:distinctSubjects 151 ;
+        void:property <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples 151
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 31 ;
+        void:property <http://purl.org/dc/terms/issued> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 1 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ESA95TP_DENOM> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 3 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ESA95TP_TRANS> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 61 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#used> ;
+        void:triples 62
+    ], [
+        void:distinctObjects 214 ;
+        void:distinctSubjects 2470575 ;
+        void:property <http://ecb.270a.info/attribute/1.0/TIME_FORMAT> ;
+        void:triples 2470575
+    ], [
+        void:distinctObjects 496948 ;
+        void:distinctSubjects 2470575 ;
+        void:property <http://ecb.270a.info/measure/1.0/OBS_VALUE> ;
+        void:triples 2470575
+    ], [
+        void:distinctObjects 395 ;
+        void:distinctSubjects 2507606 ;
+        void:property rdf:type ;
+        void:triples 1244703
+    ], [
+        void:distinctObjects 108 ;
+        void:distinctSubjects 2469136 ;
+        void:property <http://ecb.270a.info/attribute/1.0/OBS_CONF> ;
+        void:triples 2469136
+    ], [
+        void:distinctObjects 1 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ESA95TP_PRICE> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 31 ;
+        void:property <http://purl.org/dc/terms/title> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 30 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#wasStartedBy> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 223 ;
+        void:distinctSubjects 19708 ;
+        void:property <http://ecb.270a.info/attribute/1.0/OBS_COM> ;
+        void:triples 19708
+    ], [
+        void:distinctObjects 23306 ;
+        void:distinctSubjects 106 ;
+        void:property qb:slice ;
+        void:triples 23306
+    ], [
+        void:distinctObjects 30 ;
+        void:distinctSubjects 30 ;
+        void:property <http://www.w3.org/ns/prov#agent> ;
+        void:triples 30
+    ], [
+        void:distinctObjects 3 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ESA95TP_SECTOR> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ESA95TP_DC_AL> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#generated> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 30 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#qualifiedAssociation> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 2484027 ;
+        void:distinctSubjects 23299 ;
+        void:property qb:observation ;
+        void:triples 2484027
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 13452 ;
+        void:property <http://eurostat.270a.info/attribute/1.0/TIME_FORMAT> ;
+        void:triples 13452
+    ], [
+        void:distinctObjects 60 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#qualifiedUsage> ;
+        void:triples 62
+    ], [
+        void:distinctObjects 5 ;
+        void:distinctSubjects 13452 ;
+        void:property <http://eurostat.270a.info/attribute/1.0/OBS_STATUS> ;
+        void:triples 13452
+    ], [
+        void:distinctObjects 47 ;
+        void:distinctSubjects 25517 ;
+        void:property <http://ecb.270a.info/attribute/1.0/PUBL_PUBLIC> ;
+        void:triples 25517
+    ], [
+        void:distinctObjects 1 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ADJUSTMENT> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 5 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ESA95TP_CPAREA> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 13452 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/FREQ> ;
+        void:triples 13452
+    ], [
+        void:distinctObjects 10 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ESA95TP_CPSECTOR> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 1 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ESA95TP_CONS> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 494 ;
+        void:distinctSubjects 2492568 ;
+        void:property <http://ecb.270a.info/dimension/1.0/ICP_SUFFIX> ;
+        void:triples 2492568
+    ], [
+        void:distinctObjects 30 ;
+        void:distinctSubjects 30 ;
+        void:property <http://www.w3.org/ns/prov#hadRole> ;
+        void:triples 30
+    ], [
+        void:distinctObjects 30 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#wasAttributedTo> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 222 ;
+        void:distinctSubjects 2470575 ;
+        void:property <http://ecb.270a.info/attribute/1.0/OBS_STATUS> ;
+        void:triples 2470575
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 61 ;
+        void:property <http://purl.org/dc/terms/creator> ;
+        void:triples 61
+    ], [
+        void:distinctObjects 120 ;
+        void:distinctSubjects 2492568 ;
+        void:property <http://ecb.270a.info/dimension/1.0/REF_AREA> ;
+        void:triples 2492568
+    ], [
+        void:distinctObjects 106 ;
+        void:distinctSubjects 23306 ;
+        void:property qb:sliceStructure ;
+        void:triples 23306
+    ], [
+        void:distinctObjects 112 ;
+        void:distinctSubjects 2492568 ;
+        void:property <http://ecb.270a.info/dimension/1.0/ADJUSTMENT> ;
+        void:triples 2492568
+    ], [
+        void:distinctObjects 1 ;
+        void:distinctSubjects 14765 ;
+        void:property <http://eurostat.270a.info/dimension/1.0/ESA95TP_SUFFIX> ;
+        void:triples 14765
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 13452 ;
+        void:property <http://eurostat.270a.info/attribute/1.0/COLLECTION> ;
+        void:triples 13452
+    ], [
+        void:distinctObjects 5660 ;
+        void:distinctSubjects 2492568 ;
+        void:property <http://ecb.270a.info/dimension/1.0/ICP_ITEM> ;
+        void:triples 2492568
+    ], [
+        void:distinctObjects 228 ;
+        void:distinctSubjects 1259696 ;
+        void:property <http://ecb.270a.info/attribute/1.0/UNIT_INDEX_BASE> ;
+        void:triples 1259696
+    ], [
+        void:distinctObjects 30 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#wasAssociatedWith> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 110 ;
+        void:distinctSubjects 2470575 ;
+        void:property <http://ecb.270a.info/attribute/1.0/COLLECTION> ;
+        void:triples 2470575
+    ], [
+        void:distinctObjects 131 ;
+        void:distinctSubjects 2492568 ;
+        void:property <http://ecb.270a.info/dimension/1.0/STS_INSTITUTION> ;
+        void:triples 2492568
+    ], [
+        void:distinctObjects 61 ;
+        void:distinctSubjects 60 ;
+        void:property <http://www.w3.org/ns/prov#entity> ;
+        void:triples 61
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 31 ;
+        void:property <http://www.w3.org/ns/prov#generatedAtTime> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 31 ;
+        void:distinctSubjects 31 ;
+        void:property <http://purl.org/dc/terms/identifier> ;
+        void:triples 31
+    ], [
+        void:distinctObjects 111 ;
+        void:distinctSubjects 2484027 ;
+        void:property qb:dataSet ;
+        void:triples 2484027
+    ], [
+        void:distinctObjects 1 ;
+        void:distinctSubjects 13452 ;
+        void:property <http://eurostat.270a.info/attribute/1.0/OBS_CONF> ;
+        void:triples 13452
+    ] ;
+    void:triples 41313439 ;
+    void:vocabulary <http://ecb.270a.info/attribute/1.0/>, <http://ecb.270a.info/dimension/1.0/>, <http://ecb.270a.info/measure/1.0/>, <http://eurostat.270a.info/attribute/1.0/>, <http://eurostat.270a.info/dimension/1.0/>, <http://eurostat.270a.info/measure/1.0/>, <http://purl.org/dc/terms/>, <http://purl.org/linked-data/cube>, <http://www.w3.org/1999/02/22-rdf-syntax-ns>, <http://www.w3.org/2000/01/rdf-schema>, <http://www.w3.org/ns/prov> ;
+    a void:Dataset .
+
+xstats:schema
+    a qb:AttributeProperty .
+
+xstats:subjectsOfType
+    a qb:DimensonProperty .
+
+xstats:value
+    a qb:MeasureProperty .
+
+

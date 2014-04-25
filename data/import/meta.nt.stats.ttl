@@ -1,0 +1,786 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix xstats: <http://example.org/XStats#> .
+
+<http://ecb.270a.info/dataset/meta>
+    void:classPartition [
+        void:class <http://ecb.270a.info/class/1.0/CL_SURVEY_BRKDWN> ;
+        void:entities 222
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FVC_REP_SECTOR> ;
+        void:entities 4
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SSS_INSTRUMENT> ;
+        void:entities 27
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_TR_TYPE> ;
+        void:entities 12
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_TRD_PRODUCT> ;
+        void:entities 20
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_CREDIT_RATING> ;
+        void:entities 4
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_RPP_GEO_COV> ;
+        void:entities 14
+    ], [
+        void:class qb:AttributeProperty ;
+        void:entities 61
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SEE_SYSTEM> ;
+        void:entities 94
+    ], [
+        void:class qb:DimensionProperty ;
+        void:entities 168
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_PS_COUNT_SECTOR> ;
+        void:entities 15
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CLI_LM_ITEM> ;
+        void:entities 95
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_OFI_REP_SECTOR> ;
+        void:entities 13
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_AMOUNT_CAT> ;
+        void:entities 5
+    ], [
+        void:class <http://purl.org/linked-data/sdmx#ConceptRole> ;
+        void:entities 223
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE_PDF> ;
+        void:entities 440
+    ], [
+        void:class <http://purl.org/linked-data/sdmx#FrequencyRole> ;
+        void:entities 2
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_RPP_SOURCE> ;
+        void:entities 6
+    ], [
+        void:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+        void:entities 55609
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BKN_ITEM> ;
+        void:entities 12
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_UNIT_MULT> ;
+        void:entities 9
+    ], [
+        void:class qb:ComponentSpecification ;
+        void:entities 1321
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_ICP_SUFFIX> ;
+        void:entities 29
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BKN_SERIES> ;
+        void:entities 7
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BOP_EC_ACTIV_R1> ;
+        void:entities 181
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DEBT_TYPE> ;
+        void:entities 11
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_IR_BUS_COV> ;
+        void:entities 3
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_MATURITY_CAT> ;
+        void:entities 66
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DD_SUFFIX> ;
+        void:entities 34
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_PSS_SYSTEM> ;
+        void:entities 54
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE_FM> ;
+        void:entities 4239
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_ESA95_UNIT> ;
+        void:entities 11
+    ], [
+        void:class <http://www.w3.org/ns/prov#Activity> ;
+        void:entities 219
+    ], [
+        void:class <http://purl.org/linked-data/sdmx#Concept> ;
+        void:entities 55609
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_IN_OUT_DATA_IFI> ;
+        void:entities 222
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_CURR_BRKDWN> ;
+        void:entities 13
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FCT_SOURCE> ;
+        void:entities 139
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CLI_EONIA_ITEM> ;
+        void:entities 3
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_IR_FV_TYPE> ;
+        void:entities 6
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SAFE_ANSWER> ;
+        void:entities 124
+    ], [
+        void:class <http://www.w3.org/ns/prov#Usage> ;
+        void:entities 339
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CLI_EONIA_BANK> ;
+        void:entities 84
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE_SEC> ;
+        void:entities 11
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FIRM_SIZE> ;
+        void:entities 6
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SSI_INDICATOR> ;
+        void:entities 14
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SOURCE_DATA> ;
+        void:entities 4
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FCT_HORIZON> ;
+        void:entities 59
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FIRM_TURNOVER> ;
+        void:entities 6
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_ADJUSTMENT> ;
+        void:entities 10
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_RT_ECON_CONCEPT> ;
+        void:entities 263
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_RIR_SUFFIX> ;
+        void:entities 5
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_ESA95_SECTOR> ;
+        void:entities 80
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BS_SUFFIX> ;
+        void:entities 37
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_EFFECT_DOMAIN> ;
+        void:entities 12
+    ], [
+        void:class <http://www.w3.org/ns/prov#Association> ;
+        void:entities 1
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_OBS_CONF> ;
+        void:entities 5
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SAFE_ITEM> ;
+        void:entities 67
+    ], [
+        void:class <http://purl.org/linked-data/sdmx#DataStructureDefinition> ;
+        void:entities 46
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FVC_ORI_SECTOR> ;
+        void:entities 14
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_TIME_HORIZON> ;
+        void:entities 11
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_MM_BANK> ;
+        void:entities 253
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_AME_ITEM> ;
+        void:entities 878
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FIRM_OWNERSHIP> ;
+        void:entities 8
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_MM_SEGMENT> ;
+        void:entities 5
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE_BKN> ;
+        void:entities 4
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_COLLATERAL> ;
+        void:entities 8
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_STS_CONCEPT> ;
+        void:entities 46
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SAFE_DENOM> ;
+        void:entities 5
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_MATURITY_ORIG> ;
+        void:entities 31
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_CURRENCY> ;
+        void:entities 302
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_STS_SUFFIX> ;
+        void:entities 9
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE_MIR> ;
+        void:entities 11
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_ESA95_BREAKDOWN> ;
+        void:entities 278
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_AREA_EE> ;
+        void:entities 521
+    ], [
+        void:class <http://purl.org/linked-data/sdmx#TimeRole> ;
+        void:entities 4
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_STS_INSTITUTION> ;
+        void:entities 7
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_IVF_ITEM> ;
+        void:entities 19
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BLS_AGG_METHOD> ;
+        void:entities 50
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_MFI_LIST> ;
+        void:entities 10
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FCT_BREAKDOWN> ;
+        void:entities 88
+    ], [
+        void:class rdf:Property ;
+        void:entities 231
+    ], [
+        void:class qb:MeasureProperty ;
+        void:entities 2
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_IR_TYPE> ;
+        void:entities 10
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SURVEY_ITEM> ;
+        void:entities 694
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_EXR_TYPE> ;
+        void:entities 36
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BOP_BASIS> ;
+        void:entities 6
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BANK_SELECTION> ;
+        void:entities 105
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_MATURITY_TYPE> ;
+        void:entities 2
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_AME_TRANSFORM> ;
+        void:entities 2
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FVC_ITEM> ;
+        void:entities 16
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_CB_ITEM> ;
+        void:entities 1082
+    ], [
+        void:class qb:SliceKey ;
+        void:entities 46
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FIRM_SECTOR> ;
+        void:entities 5
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_INSTRUMENT_FM> ;
+        void:entities 251
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BLS_ITEM> ;
+        void:entities 95
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_INS_BUS_TYPE> ;
+        void:entities 3
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_OFI_ITEM> ;
+        void:entities 24
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_AME_AREA_EE> ;
+        void:entities 100
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_UNIT> ;
+        void:entities 240
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DECIMALS> ;
+        void:entities 10
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE_PSS> ;
+        void:entities 28
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_NA_PRICE> ;
+        void:entities 8
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_CB_SECTOR_SIZE> ;
+        void:entities 6
+    ], [
+        void:class qb:ComponentProperty ;
+        void:entities 231
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_TRD_SUFFIX> ;
+        void:entities 7
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_REPO_CPARTY> ;
+        void:entities 6
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_CCP_SYSTEM> ;
+        void:entities 18
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_PROVIDER_FM_ID> ;
+        void:entities 34489
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DD_TRANSF> ;
+        void:entities 57
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_RT_DENOM> ;
+        void:entities 14
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_EXR_SUFFIX> ;
+        void:entities 6
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BS_COUNT_SECTOR> ;
+        void:entities 61
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_RPP_DWELLING> ;
+        void:entities 9
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SAFE_FILTER> ;
+        void:entities 3
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_OBS_STATUS> ;
+        void:entities 10
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_GOVNT_ITEM_ESA> ;
+        void:entities 1755
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE_MM> ;
+        void:entities 73
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE_LIG> ;
+        void:entities 8
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_RPP_SUFFIX> ;
+        void:entities 8
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_ESA95_SUFFIX> ;
+        void:entities 14
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_ICP_ITEM> ;
+        void:entities 2580
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_MUFA_VALUATION> ;
+        void:entities 8
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DD_ECON_CONCEPT> ;
+        void:entities 179
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_PSS_INFO_TYPE> ;
+        void:entities 18
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_PROVIDER_FM> ;
+        void:entities 10
+    ], [
+        void:class <http://purl.org/linked-data/sdmx#PrimaryMeasureRole> ;
+        void:entities 2
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SURVEY_SOURCE> ;
+        void:entities 17
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FCT_TOPIC> ;
+        void:entities 6
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_AME_REFERENCE> ;
+        void:entities 25
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BKN_DENOM> ;
+        void:entities 36
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SSS_SYSTEM> ;
+        void:entities 48
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_LIG_ITEM> ;
+        void:entities 29
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SECTOR_ESA> ;
+        void:entities 137
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_GOVNT_ST_SUFFIX> ;
+        void:entities 23
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_IVF_REP_SECTOR> ;
+        void:entities 21
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_AVAILABILITY> ;
+        void:entities 19
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE_BOP> ;
+        void:entities 10
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_PSS_INSTRUMENT> ;
+        void:entities 47
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_MARKET_ROLE> ;
+        void:entities 3
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_AME_AGG_METHOD> ;
+        void:entities 5
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_TRD_FLOW> ;
+        void:entities 3
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FREQ> ;
+        void:entities 9
+    ], [
+        void:class <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+        void:entities 147
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BS_ITEM> ;
+        void:entities 221
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SAFE_QUESTION> ;
+        void:entities 34
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BLS_COUNT> ;
+        void:entities 5
+    ], [
+        void:class qb:DataStructureDefinition ;
+        void:entities 46
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_COLLECTION> ;
+        void:entities 10
+    ], [
+        void:class qb:CodedProperty ;
+        void:entities 168
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BS_REP_SECTOR> ;
+        void:entities 22
+    ], [
+        void:class <http://www.w3.org/ns/prov#Agent> ;
+        void:entities 2
+    ], [
+        void:class <http://purl.org/linked-data/sdmx#CodeList> ;
+        void:entities 147
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_TRADE_WEIGHT> ;
+        void:entities 4
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BKN_TYPE> ;
+        void:entities 3
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE_IFI> ;
+        void:entities 16
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_STS_CLASS> ;
+        void:entities 1407
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_MFI_STATUS> ;
+        void:entities 4
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BOP_ITEM> ;
+        void:entities 742
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_FIRM_AGE> ;
+        void:entities 6
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SEC_SUFFIX> ;
+        void:entities 7
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_CB_REP_SECTOR> ;
+        void:entities 11
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_DATA_TYPE> ;
+        void:entities 32
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_ORGANISATION> ;
+        void:entities 640
+    ], [
+        void:class <http://www.w3.org/ns/prov#Entity> ;
+        void:entities 195
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_AME_UNIT> ;
+        void:entities 10
+    ], [
+        void:class <http://www.w3.org/2000/01/rdf-schema#Class> ;
+        void:entities 147
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_BLS_COUNT_DTL> ;
+        void:entities 27
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_ESA95_ACCOUNT> ;
+        void:entities 220
+    ], [
+        void:class <http://www.w3.org/2002/07/owl#Class> ;
+        void:entities 147
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SSS_INFO_TYPE> ;
+        void:entities 69
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_SERIES_DENOM> ;
+        void:entities 21
+    ], [
+        void:class <http://ecb.270a.info/class/1.0/CL_GOVNT_VALUATION> ;
+        void:entities 17
+    ] ;
+    void:classes 172 ;
+    void:entities 58330 ;
+    void:properties 49 ;
+    void:propertyPartition [
+        void:distinctObjects 294 ;
+        void:distinctSubjects 294 ;
+        void:property <http://www.w3.org/2000/01/rdf-schema#seeAlso> ;
+        void:triples 294
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 193 ;
+        void:property <http://purl.org/dc/terms/license> ;
+        void:triples 193
+    ], [
+        void:distinctObjects 172 ;
+        void:distinctSubjects 229 ;
+        void:property qb:codeList ;
+        void:triples 231
+    ], [
+        void:distinctObjects 1 ;
+        void:distinctSubjects 2 ;
+        void:property <http://www.w3.org/ns/prov#qualifiedAssociation> ;
+        void:triples 2
+    ], [
+        void:distinctObjects 219 ;
+        void:distinctSubjects 219 ;
+        void:property <http://www.w3.org/ns/prov#startedAtTime> ;
+        void:triples 219
+    ], [
+        void:distinctObjects 53535 ;
+        void:distinctSubjects 56180 ;
+        void:property <http://www.w3.org/2004/02/skos/core#prefLabel> ;
+        void:triples 56184
+    ], [
+        void:distinctObjects 3 ;
+        void:distinctSubjects 46 ;
+        void:property <http://purl.org/linked-data/sdmx/2009/concept#mAgency> ;
+        void:triples 46
+    ], [
+        void:distinctObjects 176 ;
+        void:distinctSubjects 421 ;
+        void:property qb:dimension ;
+        void:triples 421
+    ], [
+        void:distinctObjects 4 ;
+        void:distinctSubjects 339 ;
+        void:property <http://www.w3.org/ns/prov#atTime> ;
+        void:triples 339
+    ], [
+        void:distinctObjects 46 ;
+        void:distinctSubjects 46 ;
+        void:property <http://purl.org/linked-data/sdmx/2009/concept#dsi> ;
+        void:triples 46
+    ], [
+        void:distinctObjects 4 ;
+        void:distinctSubjects 193 ;
+        void:property <http://www.w3.org/ns/prov#wasGeneratedBy> ;
+        void:triples 339
+    ], [
+        void:distinctObjects 4 ;
+        void:distinctSubjects 193 ;
+        void:property <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+        void:triples 339
+    ], [
+        void:distinctObjects 4 ;
+        void:distinctSubjects 193 ;
+        void:property <http://purl.org/dc/terms/issued> ;
+        void:triples 339
+    ], [
+        void:distinctObjects 221 ;
+        void:distinctSubjects 219 ;
+        void:property <http://www.w3.org/ns/prov#used> ;
+        void:triples 436
+    ], [
+        void:distinctObjects 4 ;
+        void:distinctSubjects 4 ;
+        void:property <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> ;
+        void:triples 4
+    ], [
+        void:distinctObjects 291 ;
+        void:distinctSubjects 58110 ;
+        void:property rdf:type ;
+        void:triples 92609
+    ], [
+        void:distinctObjects 25 ;
+        void:distinctSubjects 421 ;
+        void:property qb:order ;
+        void:triples 421
+    ], [
+        void:distinctObjects 64 ;
+        void:distinctSubjects 214 ;
+        void:property <http://purl.org/dc/terms/title> ;
+        void:triples 214
+    ], [
+        void:distinctObjects 265 ;
+        void:distinctSubjects 223 ;
+        void:property <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples 560
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 147 ;
+        void:property <http://www.w3.org/2000/01/rdf-schema#subClassOf> ;
+        void:triples 147
+    ], [
+        void:distinctObjects 410 ;
+        void:distinctSubjects 219 ;
+        void:property <http://www.w3.org/ns/prov#generated> ;
+        void:triples 556
+    ], [
+        void:distinctObjects 53767 ;
+        void:distinctSubjects 55802 ;
+        void:property <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples 55802
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 425 ;
+        void:property <http://www.w3.org/2002/07/owl#versionInfo> ;
+        void:triples 425
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 2 ;
+        void:property <http://www.w3.org/ns/prov#wasInformedBy> ;
+        void:triples 2
+    ], [
+        void:distinctObjects 172 ;
+        void:distinctSubjects 229 ;
+        void:property <http://www.w3.org/2000/01/rdf-schema#range> ;
+        void:triples 231
+    ], [
+        void:distinctObjects 247 ;
+        void:distinctSubjects 55377 ;
+        void:property <http://www.w3.org/2004/02/skos/core#inScheme> ;
+        void:triples 55377
+    ], [
+        void:distinctObjects 85 ;
+        void:distinctSubjects 854 ;
+        void:property qb:attribute ;
+        void:triples 854
+    ], [
+        void:distinctObjects 231 ;
+        void:distinctSubjects 231 ;
+        void:property qb:concept ;
+        void:triples 231
+    ], [
+        void:distinctObjects 247 ;
+        void:distinctSubjects 55377 ;
+        void:property <http://www.w3.org/2004/02/skos/core#topConceptOf> ;
+        void:triples 55377
+    ], [
+        void:distinctObjects 1321 ;
+        void:distinctSubjects 46 ;
+        void:property qb:component ;
+        void:triples 1321
+    ], [
+        void:distinctObjects 217 ;
+        void:distinctSubjects 217 ;
+        void:property <http://www.w3.org/ns/prov#endedAtTime> ;
+        void:triples 217
+    ], [
+        void:distinctObjects 1 ;
+        void:distinctSubjects 1 ;
+        void:property <http://www.w3.org/ns/prov#hadRole> ;
+        void:triples 1
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 193 ;
+        void:property <http://www.w3.org/ns/prov#wasAttributedTo> ;
+        void:triples 193
+    ], [
+        void:distinctObjects 3 ;
+        void:distinctSubjects 46 ;
+        void:property qb:measure ;
+        void:triples 46
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 194 ;
+        void:property <http://purl.org/dc/terms/creator> ;
+        void:triples 194
+    ], [
+        void:distinctObjects 46 ;
+        void:distinctSubjects 46 ;
+        void:property qb:sliceKey ;
+        void:triples 46
+    ], [
+        void:distinctObjects 283 ;
+        void:distinctSubjects 1367 ;
+        void:property qb:componentProperty ;
+        void:triples 1650
+    ], [
+        void:distinctObjects 4 ;
+        void:distinctSubjects 854 ;
+        void:property qb:componentAttachment ;
+        void:triples 854
+    ], [
+        void:distinctObjects 68 ;
+        void:distinctSubjects 217 ;
+        void:property <http://www.w3.org/2000/01/rdf-schema#comment> ;
+        void:triples 217
+    ], [
+        void:distinctObjects 55377 ;
+        void:distinctSubjects 147 ;
+        void:property <http://www.w3.org/2004/02/skos/core#hasTopConcept> ;
+        void:triples 55377
+    ], [
+        void:distinctObjects 2 ;
+        void:distinctSubjects 46 ;
+        void:property <http://purl.org/linked-data/sdmx/2009/concept#isFinal> ;
+        void:triples 46
+    ], [
+        void:distinctObjects 339 ;
+        void:distinctSubjects 2 ;
+        void:property <http://www.w3.org/ns/prov#qualifiedUsage> ;
+        void:triples 339
+    ], [
+        void:distinctObjects 1048 ;
+        void:distinctSubjects 251 ;
+        void:property <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+        void:triples 1048
+    ], [
+        void:distinctObjects 3 ;
+        void:distinctSubjects 219 ;
+        void:property <http://www.w3.org/ns/prov#wasAssociatedWith> ;
+        void:triples 219
+    ], [
+        void:distinctObjects 1 ;
+        void:distinctSubjects 1 ;
+        void:property <http://www.w3.org/ns/prov#agent> ;
+        void:triples 1
+    ], [
+        void:distinctObjects 1 ;
+        void:distinctSubjects 2 ;
+        void:property <http://www.w3.org/ns/prov#wasStartedBy> ;
+        void:triples 2
+    ], [
+        void:distinctObjects 4 ;
+        void:distinctSubjects 339 ;
+        void:property <http://www.w3.org/ns/prov#entity> ;
+        void:triples 339
+    ], [
+        void:distinctObjects 4 ;
+        void:distinctSubjects 193 ;
+        void:property <http://www.w3.org/ns/prov#generatedAtTime> ;
+        void:triples 339
+    ], [
+        void:distinctObjects 114 ;
+        void:distinctSubjects 263 ;
+        void:property <http://purl.org/dc/terms/identifier> ;
+        void:triples 263
+    ] ;
+    void:triples 462831 ;
+    void:vocabulary <http://purl.org/dc/terms/>, <http://purl.org/linked-data/cube>, <http://purl.org/linked-data/sdmx/2009/concept>, <http://www.w3.org/1999/02/22-rdf-syntax-ns>, <http://www.w3.org/2000/01/rdf-schema>, <http://www.w3.org/2002/07/owl>, <http://www.w3.org/2004/02/skos/core>, <http://www.w3.org/ns/prov> ;
+    a void:Dataset .
+
+xstats:schema
+    a qb:AttributeProperty .
+
+xstats:subjectsOfType
+    a qb:DimensonProperty .
+
+xstats:value
+    a qb:MeasureProperty .
+
+
