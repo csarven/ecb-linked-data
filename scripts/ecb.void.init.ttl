@@ -42,12 +42,12 @@ ecb-dataset:ecb
     foaf:homepage <http://ecb.270a.info/> ;
     dcterms:source <http://www.ecb.int/> ;
     dcterms:publisher <http://csarven.ca/#i> ;
-    dcterms:modified "2013-03-14"^^xsd:date ;
+    dcterms:modified "2014-04-12"^^xsd:date ;
     dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
     void:subset
         ecb-dataset:void ,
         ?voidDataset ;
-    void:triples 241400246 ;
+    void:triples 468899474 ;
     dcterms:subject
         <http://dbpedia.org/resource/Statistical_survey> ,
         <http://dbpedia.org/resource/Finance> ,
@@ -65,7 +65,7 @@ ecb-dataset:ecb
 ecb-dataset:void
     a sd:Graph, void:Dataset ;
     dcterms:title "SD+VoID triples"@en ;
-    void:triples 10199 ;
+    void:triples 13587 ;
     void:dataDump <http://ecb.270a.info/void.ttl> ;
     .
 
@@ -92,7 +92,7 @@ ecb-dataset:void
     a sd:Dataset ;
     dcterms:title "ECB Linked Data"@en ;
     dcterms:description "ECB Linked Data"@en ;
-    void:triples 241400246 ;
+    void:triples 468899474 ;
 
     sd:defaultGraph :defaultGraph ;
 
@@ -105,7 +105,7 @@ ecb-dataset:void
     a sd:Graph, void:Dataset ;
     dcterms:title "ECB Linked Data SPARQL Endpoint Description"@en ;
     dcterms:description "Contains a copy of this SD+VoID file!"@en ;
-    void:triples 241000000 ;
+    void:triples 470000000 ;
     .
 :namedGraphVoID
     sd:name ecb-graph:void ;

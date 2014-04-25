@@ -13,7 +13,7 @@ DataSetCodes=(CodeList Concept KeyFamily) ;
 for DataSetCode in "${DataSetCodes[@]}" ; do ls -1 "$data""$DataSetCode".rdf | while read i ; do rapper -g "$i" > "$data"import/"$DataSetCode".nt ; done ; done
 
 
-ExcludeDataSetCodes=(SEC YC) ;
+ExcludeDataSetCodes=(BNT) ;
 while read DataSetCode ; do
     if [[ ${ExcludeDataSetCodes[*]} =~ "$DataSetCode" ]] ;
         then
