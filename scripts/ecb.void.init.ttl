@@ -67,7 +67,6 @@ ecb-dataset:ecb
 ecb-dataset:void
     a sd:Graph, void:Dataset ;
     dcterms:title "SD+VoID triples"@en ;
-    void:triples 13587 ;
     void:dataDump <http://ecb.270a.info/void.ttl> ;
     .
 
@@ -255,13 +254,6 @@ frb-dataset:frb
     void:sparqlEndpoint <http://eurostat.linked-statistics.org/sparql> ;
     #TODO: What's the count?
     foaf:homepage <http://eurostat.linked-statistics.org/> ;
-    .
-#TODO: What's the real VoID URL?
-<http://data.nasa.gov/>
-    rdf:type void:Dataset ;
-    dcterms:title "NASA"@en ;
-    #TODO: What's the count?
-    foaf:homepage <http://data.nasa.gov/> ;
     .
 #TODO: What's the real VoID URL?
 <http://purl.org/collections/iati/void.ttl#IATI>
