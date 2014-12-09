@@ -2,3 +2,5 @@
 <http://ecb.270a.info/dimension/1.0/REF_AREA> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/dimension#refArea> .
 <http://ecb.270a.info/dimension/1.0/TIME_PERIOD> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/dimension#refPeriod> .
 <http://ecb.270a.info/dimension/1.0/FREQ> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/dimension#freq> .
+<http://ecb.270a.info/dimension/1.0/CURRENCY> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/sdmx/2009/dimension#currency> .
+
